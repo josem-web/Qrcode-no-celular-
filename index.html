@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>Leitor QR da Galeria</title>
+</head>
+<body>
+<div class="app">
+  <h1>📷 Ler QR da Imagem</h1>
+  <p>Selecione uma foto com QR Code da galeria</p>
+
+  <label for="fileInput" class="upload-btn">Escolher Imagem</label>
+  <input type="file" id="fileInput" accept="image/*" hidden>
+
+  <div id="previewBox" hidden>
+    <img id="preview">
+  </div>
+
+  <div id="resultBox" hidden>
+    <h3>Resultado:</h3>
+    <p id="resultText"></p>
+    <a id="resultLink" target="_blank" hidden>Abrir Link</a>
+    <button id="copyBtn" class="btn">Copiar</button>
+  </div>
+
+  <p id="status"></p>
+</div>
+
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
